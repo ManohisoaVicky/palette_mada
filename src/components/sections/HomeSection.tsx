@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeSection() {
   return (
-    <div>HomeSection</div>
+    <div className='section' id='home'>HomeSection</div>
   )
 }
 

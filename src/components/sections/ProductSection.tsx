@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductSection() {
   return (
-    <div>ProductSection</div>
+    <div className='section' id='product'>ProductSection</div>
   )
 }
 

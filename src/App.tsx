@@ -8,10 +8,18 @@ import ContactSection from './components/sections/ContactSection';
 import Footer from './components/elements/Footer';
 
 function App() {
+
+  function scrollTo(id: string) {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="App">
       <header>
-        <Navbar />
+        <Navbar scrollTo={scrollTo}/>
       </header>
       <main>
         <HomeSection />

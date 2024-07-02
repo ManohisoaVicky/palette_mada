@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Navbar() {
+
+interface NavbarProps {
+  scrollTo: (id: string) => void
+}
+
+
+function Navbar({scrollTo}: NavbarProps) {
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -9,10 +15,10 @@ function Navbar() {
       </div>
       <div className="navbar-menu">
         <ul className="navbar-menu-list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Products</li>
-          <li>Contact</li>
+          <button className='menu-item' onClick={() => scrollTo("home")}>Home</button>
+          <button className='menu-item' onClick={() => scrollTo("about")}>About</button>
+          <button className='menu-item' onClick={() => scrollTo("product")}>Products</button>
+          <button className='menu-item' onClick={() => scrollTo("contact")}>Contact</button>
         </ul>
       </div>
       </div>

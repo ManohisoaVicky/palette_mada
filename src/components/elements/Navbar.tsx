@@ -15,10 +15,10 @@ function Navbar({scrollTo}: NavbarProps) {
       </div>
       <div className="navbar-menu">
         <ul className="navbar-menu-list">
-          <button className='menu-item' onClick={() => scrollTo("home")}>Home</button>
-          <button className='menu-item' onClick={() => scrollTo("about")}>About</button>
-          <button className='menu-item' onClick={() => scrollTo("product")}>Products</button>
-          <button className='menu-item' onClick={() => scrollTo("contact")}>Contact</button>
+          <button className='menu-item' onClick={() => scrollTo("home")}>Accueil</button>
+          <button className='menu-item' onClick={() => scrollTo("about")}>À Propos</button>
+          <button className='menu-item' onClick={() => scrollTo("product")}>Produits</button>
+          <button className='menu-item' onClick={() => scrollTo("contact")}>Contacts</button>
         </ul>
       </div>
       </div>

@@ -41,7 +41,7 @@
   height: 10vh;
   background-color: var(--light-blue);
   z-index: 1000; 
-}
+  }
 
 .navbar-container {
   display: flex;
@@ -74,6 +74,8 @@
   top: 50%; 
   transform: translateY(-50%);
   padding-left: 10%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
 }
 
 .menu-item {
@@ -81,9 +83,12 @@
   border: none;
   font-size: 16px;
   color: white;
+  transition: all 0.3s;
+  font-family: 'Roboto', sans-serif;
 }
 
 .menu-item:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 

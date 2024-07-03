@@ -1,25 +1,24 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/elements/Navbar';
-import HomeSection from './components/sections/HomeSection';
-import AboutSection from './components/sections/AboutSection';
-import ProductSection from './components/sections/ProductSection';
-import ContactSection from './components/sections/ContactSection';
-import Footer from './components/elements/Footer';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/elements/Navbar";
+import HomeSection from "./components/sections/HomeSection";
+import AboutSection from "./components/sections/AboutSection";
+import ProductSection from "./components/sections/ProductSection";
+import ContactSection from "./components/sections/ContactSection";
+import Footer from "./components/elements/Footer";
 
 function App() {
-
   function scrollTo(id: string) {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     element?.scrollIntoView({
-      behavior: 'smooth'
-    })
+      behavior: "smooth",
+    });
   }
 
   return (
     <div className="App">
       <header>
-        <Navbar scrollTo={scrollTo}/>
+        <Navbar scrollTo={scrollTo} />
       </header>
       <main>
         <HomeSection />
@@ -28,7 +27,7 @@ function App() {
         <ContactSection />
       </main>
       <footer>
-        <Footer />
+        <Footer scrollTo={scrollTo} />
       </footer>
     </div>
   );

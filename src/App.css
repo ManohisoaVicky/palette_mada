@@ -331,6 +331,10 @@ form {
   font-family: "Noto Serif", serif;
 }
 
+.mess {
+  height: 10rem;
+}
+
 form > button {
   background-color: var(--dark-brown);
   border: none;
@@ -364,6 +368,7 @@ form > button:hover {
   display: flex;
   justify-content: center;
   width: 30%;
+  padding-top: 2rem;
 }
 
 .footer-link-container {
@@ -391,5 +396,5 @@ form > button:hover {
 }
 
 .copyright {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }

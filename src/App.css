@@ -254,3 +254,8 @@ h1 {
   background-color: var(--light-brown);
 }
 
+/*-------------------------------------------------Contact Section Styles---------------------------*/
+
+#contact {
+  background-color: var(--light-blue);
+}

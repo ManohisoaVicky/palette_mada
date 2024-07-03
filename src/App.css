@@ -232,11 +232,18 @@ h1 {
   align-items: center;
   width: 45%;
   padding: 1rem;
+  border-radius: 1rem;
 }
 
 .wood-product > img,
 .plastic-product > img {
   width: 40rem;
+}
+
+.wood-product > h3,
+.plastic-product > h3 {
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 1rem;
 }
 
 .wood-product {

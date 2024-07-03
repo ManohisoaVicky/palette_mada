@@ -7,7 +7,7 @@ function AboutSection() {
     <div className='section' id='about'>
 
       <div className="intro">
-        <h2>Qui Sommes-Nous ?</h2>
+        <h2>Qui Sommes-Nous?</h2>
         <p>Palette Mada se spécialise dans la fourniture de palettes en bois et en plastique de haute qualité, 
             adaptées pour répondre aux besoins diversifiés de nos clients. Que vous recherchiez des palettes 
             en bois durables pour une utilisation intensive ou des palettes en plastique légères pour un transport efficace, 

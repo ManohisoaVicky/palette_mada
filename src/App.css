@@ -141,8 +141,20 @@ h1 {
 }
 
 .intro {
-  border: 2px solid red;
+  text-align: center;
   height: 20%;
+}
+
+.intro > h2 {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.intro > p {
+  padding: 0 33rem;
+  font-size: 1rem;
+  font-family: 'Noto Serif', serif;
+  padding-top: 0.5rem;
 }
 
 .history,

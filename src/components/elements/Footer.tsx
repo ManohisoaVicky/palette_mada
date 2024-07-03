@@ -7,13 +7,19 @@ interface FooterProps {
 
 function Footer({ scrollTo }: FooterProps) {
   return (
-    <div>
+    <div className="footer">
       <div className="footer-main">
         <div>
           <h3>Palette Mada</h3>
-          <button className="footer-btn">Accueil</button>
-          <button className="footer-btn">À Propos</button>
-          <button className="footer-btn">Nos Produits</button>
+          <button className="footer-btn" onClick={() => scrollTo("home")}>
+            Accueil
+          </button>
+          <button className="footer-btn" onClick={() => scrollTo("about")}>
+            À Propos
+          </button>
+          <button className="footer-btn" onClick={() => scrollTo("product")}>
+            Nos Produits
+          </button>
         </div>
         <div>
           <h3>Contacts</h3>

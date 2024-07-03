@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdEmail, MdPhone } from "react-icons/md"; // Material Design icons
 
 function ContactSection() {
+  const [result, setResult] = useState<string>("");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+
+    const formData = new FormData(event.currentTarget);
+
+    formData.append("access_key", "1bfb7190-a28a-4f45-b562-c306e2c14678");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.currentTarget.reset();
+      } else {
+        console.error("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error("Submission error", error);
+      setResult("An error occurred while submitting the form.");
+    }
+  };
+
   return (
     <div className="section" id="contact">
       <div className="contact-content">
@@ -30,13 +61,14 @@ function ContactSection() {
         </div>
       </div>
       <div className="contact-form">
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="input-box">
             <label>Nom</label>
             <input
               type="text"
               className="field"
               placeholder="Entrez votre nom"
+              name="name"
               required
             />
           </div>
@@ -46,6 +78,7 @@ function ContactSection() {
               type="email"
               className="field"
               placeholder="Entrez votre email"
+              name="email"
               required
             />
           </div>
@@ -54,6 +87,7 @@ function ContactSection() {
             <textarea
               className="mess"
               placeholder="Entrez votre message"
+              name="message"
             ></textarea>
           </div>
           <button type="submit">Envoyer le message</button>

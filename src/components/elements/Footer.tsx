@@ -9,35 +9,37 @@ function Footer({ scrollTo }: FooterProps) {
   return (
     <div className="footer">
       <div className="footer-main">
-        <div>
+        <div className="footer-link-container">
           <h3>Palette Mada</h3>
-          <button className="footer-btn" onClick={() => scrollTo("home")}>
+          <p className="footer-link" onClick={() => scrollTo("home")}>
             Accueil
-          </button>
-          <button className="footer-btn" onClick={() => scrollTo("about")}>
+          </p>
+          <p className="footer-link" onClick={() => scrollTo("about")}>
             À Propos
-          </button>
-          <button className="footer-btn" onClick={() => scrollTo("product")}>
+          </p>
+          <p className="footer-link" onClick={() => scrollTo("product")}>
             Nos Produits
-          </button>
+          </p>
         </div>
         <div>
           <h3>Contacts</h3>
-          <div>
+          <div className="footer-info-container">
             <MdEmail />
-            <p>palettemada@gmail.com</p>
+            <p className="footer-info">palettemada@gmail.com</p>
           </div>
-          <div>
+          <div className="footer-info-container">
             <MdPhone />
-            <p>(+261) 34 02 670 24</p>
+            <p className="footer-info">(+261) 34 02 670 24</p>
           </div>
-          <div>
+          <div className="footer-info-container">
             <MdPhone />
-            <p>(+261) 33 02 670 24</p>
+            <p className="footer-info">(+261) 33 02 670 24</p>
           </div>
         </div>
       </div>
-      <p>Droits d'auteur © [2024] Palette Mada. Tous droits réservés.</p>
+      <p className="copyright">
+        Droits d'auteur © [2024] Palette Mada. Tous droits réservés.
+      </p>
     </div>
   );
 }

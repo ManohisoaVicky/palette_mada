@@ -203,3 +203,47 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
+/*-----------------------------------------------------------Products Section Styles-------------------------------------*/
+
+#product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 7%;
+}
+
+#product > h2 {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.wood-product, 
+.plastic-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  padding: 1rem;
+}
+
+.wood-product > img,
+.plastic-product > img {
+  width: 40rem;
+}
+
+.wood-product {
+  background-color: var(--light-blue);
+}
+
+.plastic-product {
+  background-color: var(--light-brown);
+}
+

@@ -29,11 +29,11 @@ function Footer({ scrollTo }: FooterProps) {
           </div>
           <div className="footer-info-container">
             <MdPhone />
-            <p className="footer-info">(+261) 34 02 670 24</p>
+            <p className="footer-info">+261 34 02 670 24</p>
           </div>
           <div className="footer-info-container">
             <MdPhone />
-            <p className="footer-info">(+261) 33 02 670 24</p>
+            <p className="footer-info">+261 33 02 670 24</p>
           </div>
         </div>
       </div>

@@ -21,7 +21,11 @@ function ContactSection() {
           </div>
           <div>
             <MdPhone />
-            <p>034 02 670 24 | 033 02 670 24</p>
+            <p>+261 34 02 670 24</p>
+          </div>
+          <div>
+            <MdPhone />
+            <p>+261 33 02 670 24</p>
           </div>
         </div>
       </div>

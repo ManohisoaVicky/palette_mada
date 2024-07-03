@@ -2,6 +2,7 @@
   --dark-brown: #99582a;
   --light-brown: #e4caae;
   --light-blue: #e6e9ec;
+  --dark-blue: #1971c2;
 }
 
 * {
@@ -189,10 +190,12 @@ h1 {
 
 .history-content {
   background-color: var(--light-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 .values-content {
   background-color: var(--light-brown);
+  border: 1px solid var(--dark-brown);
 }
 
 .about-img {
@@ -239,6 +242,7 @@ h1 {
 .wood-product > img,
 .plastic-product > img {
   width: 40rem;
+  border-radius: 1rem;
 }
 
 .wood-product > h3,
@@ -249,10 +253,12 @@ h1 {
 
 .wood-product {
   background-color: var(--light-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 .plastic-product {
   background-color: var(--light-brown);
+  border: 1px solid var(--dark-brown);
 }
 
 /*-------------------------------------------------Contact Section Styles---------------------------*/
@@ -329,6 +335,7 @@ form {
   border-radius: 0.2rem;
   margin-bottom: 1rem;
   font-family: "Noto Serif", serif;
+  outline: 1px solid var(--dark-brown);
 }
 
 .mess {

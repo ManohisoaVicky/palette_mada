@@ -28,6 +28,9 @@ function AboutSection() {
       </div>
 
       <div className="values">
+        <div className="about-img">
+          <img src={handshake} alt="Handshake" />
+        </div>
         <div className="values-content">
           <h3>Notre Mission et Nos Valeurs</h3>
           <p>Notre mission est de fournir des solutions de palettes de premier ordre 
@@ -35,9 +38,6 @@ function AboutSection() {
               chaîne d'approvisionnement. Nous croyons en la durabilité, l'intégrité et 
               l'innovation, en veillant à ce que nos produits non seulement répondent 
               mais surpassent les normes de l'industrie.</p>
-        </div>
-        <div className="about-img">
-          <img src={handshake} alt="Handshake" />
         </div>
       </div>
     </div>

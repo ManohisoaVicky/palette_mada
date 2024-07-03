@@ -137,6 +137,9 @@ h1 {
 /*---------------------------------------------------------About Section Styles-----------------------------------------------*/
 
 #about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 7%;
 }
 
@@ -160,13 +163,40 @@ h1 {
 .history,
 .values {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 40%;
-  border: 2px solid red;
+  width: 80%;
+}
+
+.history-content,
+.values-content {
+  width: 40%;
+  padding: 4rem;
+}
+
+.history-content > h3,
+.values-content > h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.history-content > p,
+.values-content > p {
+  font-family: 'Noto Serif', serif; 
+  font-size: 1rem;
+}
+
+.history-content {
+  background-color: var(--light-blue);
+}
+
+.values-content {
+  background-color: var(--light-brown);
 }
 
 .about-img {
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: auto;
 }
 
 .about-img > img {

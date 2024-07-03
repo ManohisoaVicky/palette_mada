@@ -35,13 +35,13 @@
 .navbar {
   display: flex;
   align-items: center;
-  position: fixed; 
+  position: fixed;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 10vh;
   background-color: var(--light-blue);
-  z-index: 1000; 
-  }
+  z-index: 1000;
+}
 
 .navbar-container {
   display: flex;
@@ -71,10 +71,10 @@
 .title-container {
   position: absolute;
   left: 0;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   padding-left: 10%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
 }
 
@@ -84,7 +84,7 @@
   font-size: 16px;
   color: white;
   transition: all 0.3s;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .menu-item:hover {
@@ -122,7 +122,7 @@
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 4rem;
   color: black;
 }
@@ -131,7 +131,7 @@ h1 {
   color: var(--dark-brown);
   font-size: 1.3rem;
   padding-top: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /*---------------------------------------------------------About Section Styles-----------------------------------------------*/
@@ -150,13 +150,13 @@ h1 {
 
 .intro > h2 {
   font-size: 2rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .intro > p {
   padding: 0 33rem;
   font-size: 1rem;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   padding-top: 0.5rem;
 }
 
@@ -173,16 +173,17 @@ h1 {
 .values-content {
   width: 40%;
   padding: 4rem;
+  border-radius: 2rem;
 }
 
 .history-content > h3,
 .values-content > h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .history-content > p,
 .values-content > p {
-  font-family: 'Noto Serif', serif; 
+  font-family: "Noto Serif", serif;
   font-size: 1rem;
 }
 
@@ -216,7 +217,7 @@ h1 {
 
 #product > h2 {
   font-size: 2rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .product-container {
@@ -225,7 +226,7 @@ h1 {
   width: 80%;
 }
 
-.wood-product, 
+.wood-product,
 .plastic-product {
   display: flex;
   flex-direction: column;
@@ -242,7 +243,7 @@ h1 {
 
 .wood-product > h3,
 .plastic-product > h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 1rem;
 }
 
@@ -257,5 +258,43 @@ h1 {
 /*-------------------------------------------------Contact Section Styles---------------------------*/
 
 #contact {
+  display: flex;
+
   background-color: var(--light-blue);
+}
+
+.contact-content,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 7rem;
+}
+
+.contact-content > h2 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-content > p {
+  padding-right: 3rem;
+  font-family: "Noto Serif", serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.contact-info > div > p {
+  padding-left: 0.5rem;
 }

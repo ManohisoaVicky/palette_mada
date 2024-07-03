@@ -48,7 +48,7 @@ function ContactSection() {
           <div className="input-box">
             <label>Message</label>
             <textarea
-              className="field mess"
+              className="mess"
               placeholder="Entrez votre message"
             ></textarea>
           </div>

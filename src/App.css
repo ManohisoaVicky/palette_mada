@@ -213,6 +213,42 @@ h1 {
   border: 1px solid var(--dark-brown);
 }
 
+#contact {
+  display: flex;
+
+  background-color: var(--light-blue);
+}
+
+.contact-content,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.contact-content > h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-content > p {
+  font-family: "Noto Serif", serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info > div > p {
+  font-family: "Noto Serif", serif;
+}
+
 /*---------------------------------------------------------------LARGE SCREEN STYLES----------------------------------------------------------*/
 
 @media screen and (min-width: 1680px) {
@@ -300,49 +336,31 @@ h1 {
     padding-bottom: 1rem;
   } */
 
-  /*-------------------------------------------------Contact Large---------------------------*/
+  /*----------Contact Large---------------------------*/
 
   #contact {
-    display: flex;
-
-    background-color: var(--light-blue);
     padding: 0 15rem;
-  }
-
-  .contact-content,
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
   }
 
   .contact-content > h2 {
     padding-bottom: 1rem;
     font-size: 2rem;
-    font-family: "Open Sans", sans-serif;
   }
 
   .contact-content > p {
     padding-right: 3rem;
-    font-family: "Noto Serif", serif;
   }
 
   .contact-info {
-    display: flex;
-    flex-direction: column;
     margin-top: 1rem;
   }
 
   .contact-info > div {
-    display: flex;
-    align-items: center;
     padding-bottom: 0.5rem;
   }
 
   .contact-info > div > p {
     padding-left: 0.5rem;
-    font-family: "Noto Serif", serif;
   }
 
   .contact-form {
@@ -535,5 +553,30 @@ h1 {
   .plastic-product > img {
     width: 20rem;
     border-radius: 1rem;
+  }
+
+  /*Contact style for small screens */
+
+  #contact {
+    padding: 0 5rem;
+  }
+
+  .contact-content > h2 {
+    padding-bottom: 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-content > p {
+    font-size: 0.7rem;
+    padding-right: 2rem;
+  }
+
+  .contact-info {
+    margin-top: 0.5rem;
+  }
+
+  .contact-info > div > p {
+    padding-left: 0.2rem;
+    font-size: 0.6rem;
   }
 }

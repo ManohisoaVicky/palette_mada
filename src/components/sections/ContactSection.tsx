@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdEmail, MdPhone } from "react-icons/md"; // Material Design icons
+import Swal from "sweetalert2";
 
 function ContactSection() {
-  const [result, setResult] = useState<string>("");
-
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
 
     const formData = new FormData(event.currentTarget);
-
     formData.append("access_key", "1bfb7190-a28a-4f45-b562-c306e2c14678");
 
     try {
@@ -21,15 +18,17 @@ function ContactSection() {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        Swal.fire({
+          title: "Envoi confirmé!",
+          text: "Votre message a été envoyé avec succès.",
+          icon: "success",
+        });
         event.currentTarget.reset();
       } else {
         console.error("Error", data);
-        setResult(data.message);
       }
     } catch (error) {
       console.error("Submission error", error);
-      setResult("An error occurred while submitting the form.");
     }
   };
 

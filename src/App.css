@@ -113,6 +113,62 @@ h1 {
   font-family: "Roboto", sans-serif;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7%;
+}
+
+.intro {
+  text-align: center;
+  height: 20%;
+}
+
+.intro > h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.history,
+.values {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 80%;
+}
+
+.history-content,
+.values-content {
+  width: 40%;
+}
+
+.history-content > h3,
+.values-content > h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.history-content {
+  background-color: var(--light-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.values-content {
+  background-color: var(--light-brown);
+  border: 1px solid var(--dark-brown);
+}
+
+.about-img {
+  width: 25%;
+  height: auto;
+}
+
+.about-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
 /*---------------------------------------------------------------LARGE SCREEN STYLES----------------------------------------------------------*/
 
 @media screen and (min-width: 1680px) {
@@ -150,21 +206,8 @@ h1 {
 
   /*----------------------About Large-------------------------*/
 
-  #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 7%;
-  }
-
-  .intro {
-    text-align: center;
-    height: 20%;
-  }
-
   .intro > h2 {
     font-size: 2rem;
-    font-family: "Open Sans", sans-serif;
   }
 
   .intro > p {
@@ -174,52 +217,15 @@ h1 {
     padding-top: 0.5rem;
   }
 
-  .history,
-  .values {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 40%;
-    width: 80%;
-  }
-
   .history-content,
   .values-content {
-    width: 40%;
     padding: 4rem;
     border-radius: 2rem;
   }
-
-  .history-content > h3,
-  .values-content > h3 {
-    font-family: "Open Sans", sans-serif;
-  }
-
   .history-content > p,
   .values-content > p {
     font-family: "Noto Serif", serif;
     font-size: 1rem;
-  }
-
-  .history-content {
-    background-color: var(--light-blue);
-    border: 1px solid var(--dark-blue);
-  }
-
-  .values-content {
-    background-color: var(--light-brown);
-    border: 1px solid var(--dark-brown);
-  }
-
-  .about-img {
-    width: 25%;
-    height: auto;
-  }
-
-  .about-img > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
   }
 
   /*-----------------------------------------------------------Products Large-------------------------------------*/
@@ -469,5 +475,34 @@ h1 {
   .home-content > p {
     font-size: 0.8rem;
     padding-top: 0.5rem;
+  }
+
+  /*About style for small screens */
+
+  .intro > h2 {
+    font-size: 1.5rem;
+  }
+
+  .history-content > h3,
+  .values-content > h3 {
+    font-size: 1rem;
+  }
+
+  .intro > p {
+    padding: 0 19rem;
+    font-size: 0.5rem;
+    font-family: "Noto Serif", serif;
+    padding-top: 0.5rem;
+  }
+
+  .history-content,
+  .values-content {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  .history-content > p,
+  .values-content > p {
+    font-family: "Noto Serif", serif;
+    font-size: 0.5rem;
   }
 }

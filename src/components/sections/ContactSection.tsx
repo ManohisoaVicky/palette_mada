@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { MdEmail, MdPhone } from "react-icons/md"; // Material Design icons
 import Swal from "sweetalert2";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 function ContactSection() {
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "1bfb7190-a28a-4f45-b562-c306e2c14678");
+    const dataToSubmit = new FormData();
+    dataToSubmit.append("access_key", "1bfb7190-a28a-4f45-b562-c306e2c14678");
+    dataToSubmit.append("name", formData.name);
+    dataToSubmit.append("email", formData.email);
+    dataToSubmit.append("message", formData.message);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        body: dataToSubmit,
       });
 
       const data = await response.json();
@@ -23,7 +42,12 @@ function ContactSection() {
           text: "Votre message a été envoyé avec succès.",
           icon: "success",
         });
-        event.currentTarget.reset();
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       } else {
         console.error("Error", data);
       }
@@ -68,6 +92,8 @@ function ContactSection() {
               className="field"
               placeholder="Entrez votre nom"
               name="name"
+              value={formData.name}
+              onChange={onChange}
               required
             />
           </div>
@@ -78,6 +104,8 @@ function ContactSection() {
               className="field"
               placeholder="Entrez votre email"
               name="email"
+              value={formData.email}
+              onChange={onChange}
               required
             />
           </div>
@@ -87,6 +115,8 @@ function ContactSection() {
               className="mess"
               placeholder="Entrez votre message"
               name="message"
+              value={formData.message}
+              onChange={onChange}
             ></textarea>
           </div>
           <button type="submit">Envoyer le message</button>

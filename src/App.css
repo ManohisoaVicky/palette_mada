@@ -291,6 +291,34 @@ form > button:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--dark-brown);
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.footer-info-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+}
+
 /*---------------------------------------------------------------LARGE SCREEN STYLES----------------------------------------------------------*/
 
 @media screen and (min-width: 1680px) {
@@ -429,44 +457,22 @@ form > button:hover {
   /*---------------------Footer Large -----------------------*/
 
   .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: var(--dark-brown);
     padding: 1rem 0;
     font-size: 0.8rem;
   }
 
   .footer-main {
-    display: flex;
-    justify-content: center;
     width: 30%;
     padding-top: 2rem;
-  }
-
-  .footer-link-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
   }
 
   .footer-link {
     margin: 0.2rem 0;
   }
 
-  .footer-link:hover {
-    cursor: pointer;
-  }
-
   .footer-info {
     padding-left: 0.3rem;
     padding: 0.2rem 0;
-  }
-
-  .footer-info-container {
-    display: flex;
-    align-items: center;
   }
 
   .copyright {
@@ -615,4 +621,18 @@ form > button:hover {
   }
 
   /*Footer style for small screens */
+
+  .footer {
+    padding: 0.5rem 0;
+    font-size: 0.5rem;
+  }
+
+  .footer-main {
+    width: 30%;
+    padding-top: 1rem;
+  }
+
+  .copyright {
+    margin-top: 1rem;
+  }
 }

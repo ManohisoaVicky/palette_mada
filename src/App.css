@@ -169,6 +169,50 @@ h1 {
   border-radius: 1rem;
 }
 
+#product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 7%;
+}
+
+#product > h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.wood-product,
+.plastic-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.wood-product > h3,
+.plastic-product > h3 {
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 1rem;
+}
+
+.wood-product {
+  background-color: var(--light-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.plastic-product {
+  background-color: var(--light-brown);
+  border: 1px solid var(--dark-brown);
+}
+
 /*---------------------------------------------------------------LARGE SCREEN STYLES----------------------------------------------------------*/
 
 @media screen and (min-width: 1680px) {
@@ -228,28 +272,13 @@ h1 {
     font-size: 1rem;
   }
 
-  /*-----------------------------------------------------------Products Large-------------------------------------*/
-
-  #product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 7%;
-  }
+  /*----------------Products Large------------------------------*/
 
   #product > h2 {
     font-size: 2rem;
-    font-family: "Open Sans", sans-serif;
   }
 
-  .product-container {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-  }
-
-  .wood-product,
+  /* .wood-product,
   .plastic-product {
     display: flex;
     flex-direction: column;
@@ -257,7 +286,7 @@ h1 {
     width: 45%;
     padding: 1rem;
     border-radius: 1rem;
-  }
+  } */
 
   .wood-product > img,
   .plastic-product > img {
@@ -265,21 +294,11 @@ h1 {
     border-radius: 1rem;
   }
 
-  .wood-product > h3,
+  /* .wood-product > h3,
   .plastic-product > h3 {
     font-family: "Open Sans", sans-serif;
     padding-bottom: 1rem;
-  }
-
-  .wood-product {
-    background-color: var(--light-blue);
-    border: 1px solid var(--dark-blue);
-  }
-
-  .plastic-product {
-    background-color: var(--light-brown);
-    border: 1px solid var(--dark-brown);
-  }
+  } */
 
   /*-------------------------------------------------Contact Large---------------------------*/
 
@@ -504,5 +523,17 @@ h1 {
   .values-content > p {
     font-family: "Noto Serif", serif;
     font-size: 0.5rem;
+  }
+
+  /*Product style for small screens */
+
+  #product > h2 {
+    font-size: 1.5rem;
+  }
+
+  .wood-product > img,
+  .plastic-product > img {
+    width: 20rem;
+    border-radius: 1rem;
   }
 }
